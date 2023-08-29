@@ -7,6 +7,8 @@ defmodule Example16xAppWeb.Router do
 
   scope "/api", Example16xAppWeb do
     pipe_through :api
+
+    resources "/thing", ThingController, only: [:show], singleton: true
   end
 
   # Enables LiveDashboard only for development
