@@ -38,6 +38,9 @@ defmodule Example16xAppWeb do
 
       # Include shared imports and aliases for views
       unquote(view_helpers())
+
+      # QUESTION: Where should I add this in a newly generated phoenix 1.7.7 app?
+      use JaSerializer.PhoenixView
     end
   end
 

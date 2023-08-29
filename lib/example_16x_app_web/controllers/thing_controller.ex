@@ -1,9 +1,9 @@
-defmodule ExampleAppWeb.ThingController do
-  use ExampleAppWeb, :controller
+defmodule Example16xAppWeb.ThingController do
+  use Example16xAppWeb, :controller
 
   require Logger
 
   def show(conn, _) do
-    render(conn, "show.json-api", data: %{id: 1, age: 33})
+    render(conn, "show.json-api", data: %{volume_level: 33})
   end
 end

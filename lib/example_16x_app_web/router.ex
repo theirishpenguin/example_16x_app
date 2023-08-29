@@ -2,7 +2,9 @@ defmodule Example16xAppWeb.Router do
   use Example16xAppWeb, :router
 
   pipeline :api do
-    plug :accepts, ["json"]
+    plug :accepts, ["json-api"]
+    plug JaSerializer.ContentTypeNegotiation
+    plug JaSerializer.Deserializer
   end
 
   scope "/api", Example16xAppWeb do
